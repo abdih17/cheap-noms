@@ -1,3 +1,20 @@
-'use strict';
+(function(module) {
+  var restaurantObj = {};
 
-console.log('model works');
+  restaurantObj.requestRepos = function(callback) {
+    $.when(
+      $.get('https://api.yelp.com/v3/businesses/search', function(data) {
+        restaurantObj.allRepos = data;
+      })
+    ).done(callback);
+  };
+
+  restaurantObj.withTheAttribute = function(attr) {
+    return restaurantObj.allRepos.filter(function(aRepo) {
+      return aRepo[attr];
+    });
+  };
+
+  module.restaurantObj = restaurantObj;
+  console.log(restaurantObj);
+})(window);
