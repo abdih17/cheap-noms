@@ -6,20 +6,25 @@ var Yelp = require('yelp');
 
 
 var yelp =  new Yelp({
-  consumer_key: 'z_UroFlRvmsaihu_Fax63w',
-  consumer_secret: 'CcxiamuGMLpGktTchaASLrwgbHZY7SjyJp7d7K3vy2BaNwL72Jc2u4c9y1HNOCcY',
-  token: 'Bearer',
-  token_secret: 'JjSqeSEGUZUgZOaO-zPkA84bWBTreYXUgnVrOhFbVRxKJvDpfNgqiN9Hpdu6o7AqUO3qXXto2_5oCtXI2H7vohk9JAZpWBC9U7gpNHQpoCsVd1u5F6v-1hNkJAcmWHYx',
+  consumer_key: '9E6cwhqhNS9hqyjz3rVmYA',
+  consumer_secret: 'indNZu6wZIUHEw6UHXxxQyj5p-E',
+  token: '85G1yFdc7ROqfZvotaDF-bljbcfYurZ6',
+  token_secret: 'X2P3pnSUMfEY3kkOjkf2SCC8by8',
 });
 
-yelp.search({term: 'food', location:'Seattle'})
+yelp.search({
+  term: 'coffee',
+  location:'98117',
+  radius: 3218,
+  categories: 'coffee',
+  price: '1'
+})
   .then(function(data) {
     console.log(data);
   })
   .catch(function(err) {
     console.error(err);
   });
-
 // var proxyYelp = function(request, response) {
 //   console.log('Routing Yelp request for ', request.params[0]);
 //   (requestProxy({

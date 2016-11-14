@@ -16,5 +16,4 @@
   };
 
   module.restaurantObj = restaurantObj;
-  console.log(restaurantObj);
 })(window);
