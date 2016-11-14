@@ -1,0 +1,26 @@
+{
+  "name": "cheap-noms",
+  "version": "1.0.0",
+  "description": "Find great food for cheap.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-request-proxy": "^2.0.0",
+    "yelp": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdih17/cheap-noms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdih17/cheap-noms/issues"
+  },
+  "homepage": "https://github.com/abdih17/cheap-noms#readme"
+}
