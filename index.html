@@ -6,11 +6,22 @@
     <link rel="stylesheet" href="/styles/base.css" type="text/css">
     <link rel="stylesheet" href="/styles/layout.css" type="text/css">
     <link rel="stylesheet" href="/styles/module.css" type="text/css">
+    <script id="submissionFormTemplate" type="text/x-handlebars-template">
+      <option value="{{cuisine}}">{{cuisine}}</option>
+    </script>
   </head>
   <body>
-    <p>p tag</p>
-    <div class="">div tag</div>
-    <section>section tag</section>
+    <fieldset>
+      <form class="submissionForm" action="index.html" method="post">
+        <label for="location">Location</label>
+        <input placeholder="location" type="text" name="location" value="">
+        <select class="cuisineSelector" name="">
+          <option value="">cuisine</option>
+        </select>
+        <button id="listButton" type="button" name="button">Show Results</button>
+        <button id="mapButton" type="button" name="button">Show on Map</button>
+      </form>
+    </fieldset>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script type="text/javascript" src="js/controllers/controller.js"></script>
