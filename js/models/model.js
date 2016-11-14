@@ -3,8 +3,15 @@
 
   restaurantObj.requestRepos = function(callback) {
     $.when(
-      $.get('https://api.yelp.com/v3/businesses/search', function(data) {
+      $.get('/yelp/v3/businesses/search?term=korean&location=98117&radius=3218&categories=restaurants&price=1&is_closed=true', function(data) {
         restaurantObj.allRepos = data;
+        restaurantObj.allRepos.businesses.forEach(function(options) {
+          obj.results.push(new Opt(options.name, options.image_url, options.is_closed, options.address1, options.url));
+        });
+        console.log(restaurantObj.allRepos);
+        obj.results.forEach(function(result){
+          $('#results').append(result.toHTML());
+        });
       })
     ).done(callback);
   };
@@ -15,6 +22,7 @@
     });
   };
 
+  restaurantObj.requestRepos();
   module.restaurantObj = restaurantObj;
 
 })(window);
