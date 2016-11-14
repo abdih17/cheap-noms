@@ -11,19 +11,28 @@
     </script>
   </head>
   <body>
-    <fieldset>
-      <form class="submissionForm" action="index.html" method="post">
-        <label for="location">Location</label>
-        <input placeholder="location" type="text" name="location" value="">
-        <select class="cuisineSelector" name="">
-          <option value="">cuisine</option>
-        </select>
-        <button id="listButton" type="button" name="button">Show Results</button>
-        <button id="mapButton" type="button" name="button">Show on Map</button>
-      </form>
-    </fieldset>
+    <section class="mainSection">
+      <fieldset>
+        <form class="submissionForm" action="index.html" method="post">
+          <label for="location">Location</label>
+          <input placeholder="location" type="text" name="location" value="">
+          <select class="cuisineSelector" name="">
+            <option value="">cuisine</option>
+          </select>
+          <button id="listButton" type="button" name="button">Show Results</button>
+          <button id="mapButton" type="button" name="button">Show on Map</button>
+        </form>
+      </fieldset>
+    </section>
+
+    <section class="mainSection">
+      <div id="map"></div>
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.googlemap/1.5/jquery.googlemap.min.js"></script> -->
     <script type="text/javascript" src="js/controllers/controller.js"></script>
     <script type="text/javascript" src="js/models/model.js"></script>
     <script type="text/javascript" src="js/views/view.js"></script>
