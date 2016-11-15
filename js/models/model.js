@@ -3,7 +3,7 @@
 
   restaurantObj.requestRepos = function(location, term, callback) {
     $.when(
-      $.get('/yelp/v3/businesses/search?term=' + term + '&location=' + location + '&radius=3218&categories=restaurants&price=1&is_closed=true', function(data) {
+      $.get('/yelp/v3/businesses/search?term=' + term + '&location=' + location + '&radius=3218&categories=restaurants&price=1&is_closed=true&rating=5', function(data) {
         restaurantObj.allRepos = data;
         restaurantObj.allRepos.businesses.forEach(function(options) {
           obj.results.push(new Opt(options.name, options.image_url, options.is_closed, options.address1, options.url));
