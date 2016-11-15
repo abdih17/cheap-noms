@@ -1,7 +1,7 @@
 'use strict';
 var obj = {results: []};
 
-var coords = [];
+var markers = [];
 
 function Opt(name, image_url, is_closed, location, url, coordinates){
   this.name = name;
@@ -20,16 +20,30 @@ function Opt(name, image_url, is_closed, location, url, coordinates){
 function initMap(location){
   var map = new google.maps.Map(document.getElementById('map'), {
     center: location,
-    zoom: 4
+    zoom: 15
   });
-
-  obj.results.forEach(function(result){
+  markers = [];
+  markers = obj.results.map(function(result){
     var marker = new google.maps.Marker({
       position: {lat: result.coordinates.lat, lng: result.coordinates.lng},
-      title: results.name + ' ' + results.address1 + ' ' + results.is_closed
+      title: result.name + ' ' + result.address1 + ' ' + result.is_closed
     });
     marker.setMap(map);
+
+    var infowindow = new google.maps.InfoWindow({
+      content: marker.title
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+    return marker;
   });
+  var bounds = new google.maps.LatLngBounds();
+  markers.forEach( function (marker){
+    bounds.extend(marker.getPosition());
+  });
+  map.fitBounds(bounds);
 }
 
-initMap({lat: -25.363, lng: 131.044});
+initMap();
