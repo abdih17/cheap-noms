@@ -22,7 +22,6 @@
     });
   };
 
-  // restaurantObj.requestRepos();
   module.restaurantObj = restaurantObj;
 
 })(window);
