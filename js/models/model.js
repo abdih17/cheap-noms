@@ -22,7 +22,7 @@
     });
   };
 
-  restaurantObj.requestRepos();
+  // restaurantObj.requestRepos();
   module.restaurantObj = restaurantObj;
 
 })(window);
