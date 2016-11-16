@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/styles/base.css" type="text/css">
     <link rel="stylesheet" href="/styles/layout.css" type="text/css">
     <link rel="stylesheet" href="/styles/module.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/2866858701.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script id="resultsTemplate" type="text/x-handlebars-template">
       <li id="resultsSection">
         <div id="resultsContainer"><img id="resultsImage" src="{{image_url}}"><h2>{{name}}</h2><a href="{{url}}">Website</a><p>{{is_closed}}<br>{{address1}}</p>
@@ -15,21 +18,52 @@
   </head>
   <body>
     <section class="formSection">
-      <fieldset>
-        <form class="submissionForm" action="index.html" method="post">
-          <input placeholder="location" id="locationInput" type="text" name="location" value="">
-          <input placeholder="Search Food" id="termInput" type="text" name="searchTerm" value="">
-          <button id="listButton" type="button" name="button">Show Results</button>
-          <button id="mapButton" type="button" name="button">Show on Map</button>
+      <fieldset id="outerContainer">
+        <form class="submissionForm cf" action="index.html" method="post">
+          <input placeholder="Location" id="locationInput" type="text" name="location" value="">
+          <input placeholder="Cuisine or Dish" id="termInput" type="text" name="searchTerm" value="">
+          <button id="listButton" type="button" name="button">Search</button>
+          <button id="mapButton" type="button" name="button">Map</button>
         </form>
       </fieldset>
     </section>
+
+    <!-- <section class="formSection">
+      <fieldset>
+        <form class="submissionForm" action="index.html" method="post">
+          <input id="locationInput" type="text" placeholder="Location..." name="location" value="">
+          <input id="termInput" type="text" placeholder="Cuisine or Dish..." name="searchTerm" value="">
+          <button id="listButton" type="button" name="button">Search</button>
+          <button id="mapButton" type="submit" name="button">Show on Map</button>
+        </form>
+      </fieldset>
+    </section> -->
+
+    <header>
+      <nav class="navigation">
+        <ul>
+          <!-- login button -->
+          <li><a id="about" href="/about">About Us</a></li>
+        </ul>
+        <div class="nav-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div class="intro-container">
+          <p class="hello">Cheap Noms</p>
+
+        <div id="heroBackgroundImage">
+          <div id="color-overlay"></div>
+          <img id="heroImage" src="/images/restaurant.jpeg">
+        </div>
+
+      </nav>
+    </header>
 
     <section class="mainSection" id="mapSection">
       <div id="map"></div>
     </section>
     <section class="mainSection" id="listSection" type="text/x-handlebars-template">
-      <ul id="results"><li></li></ul>
+
+    <ul id="results"></ul>
+
     </section>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
