@@ -6,14 +6,41 @@
     <link rel="stylesheet" href="/styles/base.css" type="text/css">
     <link rel="stylesheet" href="/styles/layout.css" type="text/css">
     <link rel="stylesheet" href="/styles/module.css" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://use.fontawesome.com/2866858701.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script id="resultsTemplate" type="text/x-handlebars-template">
       <li><div><img src="{{image_url}}"><h2>{{name}}</h2><a href="{{url}}">Website</a><p>{{is_closed}}<br>{{address1}}</p></li>
     </script>
   </head>
   <body>
+    <section class="formSection">
+      <fieldset>
+        <form class="submissionForm" action="index.html" method="post">
+          <input placeholder="location" id="locationInput" type="text" name="location" value="">
+          <input placeholder="Search Food" id="termInput" type="text" name="searchTerm" value="">
+          <button id="listButton" type="button" name="button">Show Results</button>
+          <button id="mapButton" type="button" name="button">Show on Map</button>
+        </form>
+      </fieldset>
+    </section>
+
+    <section class="mainSection" id="mapSection">
+      <div id="map"></div>
+    </section>
+    <section class="mainSection" id="listSection" type="text/x-handlebars-template">
+    <ul id="results"><li></li></ul>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpn-4XBudFb2C-6--K9ScLCf7vh2lPHbI"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.googlemap/1.5/jquery.googlemap.min.js"></script> -->
+    <script type="text/javascript" src="js/controllers/controller.js"></script>
+    <script type="text/javascript" src="js/views/view.js"></script>
+    <script type="text/javascript" src="js/models/model.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpn-4XBudFb2C-6--K9ScLCf7vh2lPHbI&callback=initMap"
+   async defer></script> -->
+  </body>
+
+  <!-- <body>
     <section class="formSection">
       <fieldset id="outerContainer">
         <form class="submissionForm cf" action="index.html" method="post">
@@ -70,5 +97,5 @@
     <script type="text/javascript" src="js/models/model.js"></script>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpn-4XBudFb2C-6--K9ScLCf7vh2lPHbI&callback=initMap"
    async defer></script> -->
-  </body>
+  </body> -->
 </html>
