@@ -1,4 +1,15 @@
 #map {
+  width: 100%;
+  height: 500px;
+}
+
+h2 {
+  text-align: center;
+  /*border: black;*/
+}
+
+ul {
+  list-style: none;
   width: 50%;
   height: 50%;
   background-color: grey;
@@ -44,7 +55,7 @@ header:after {
 }*/
 
 h3 {
-  
+
 }
 
 #color-overlay {
@@ -201,4 +212,5 @@ h3 {
 #mapButton{
   margin-left: 340px;
   margin-top: -200px;
+>>>>>>> 85a7a56e2df032e0ecf970bdc25459fdd2907cb0
 }
