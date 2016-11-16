@@ -13,8 +13,6 @@ $('#mapButton').on('click', function(e) {
 });
 
 var clickFunction = function () {
-  obj.results = [];
-  $('#results').empty();
   var location = $('#locationInput').val();
   var term = $('#termInput').val();
   restaurantObj.requestRepos(location, term);
