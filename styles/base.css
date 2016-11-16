@@ -3,3 +3,8 @@
   height: 500px;
 
 }
+
+/* disables google maps infowindow "x" button */
+img[src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {
+    display: none;
+}
