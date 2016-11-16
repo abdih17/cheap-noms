@@ -12,7 +12,14 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script id="resultsTemplate" type="text/x-handlebars-template">
       <li id="resultsSection">
-        <div id="resultsContainer"><img id="resultsImage" src="{{image_url}}"><h2>{{name}}</h2><a href="{{url}}">Website</a><p>{{is_closed}}<br>{{address1}}</p>
+        <div id="resultsContainer">
+          <img id="resultsImage" src="{{image_url}}">
+          <h2>{{name}}</h2>
+          <a href="{{url}}">Website</a>
+          <p>{{is_closed}}<br>
+            {{address1}}</p>
+          <button class="showMapButton">Show on Map</button>
+        </div>
       </li>
     </script>
   </head>

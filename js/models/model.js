@@ -27,6 +27,10 @@
               console.log(restaurantObj.allRepos);
               obj.results.forEach(function(result){
                 $('#results').append(result.toHTML());
+                $('#results li:last-child').find('.showMapButton').on('click', function(){
+                  initMap(obj.results.indexOf(result));
+                  $('#mapSection').show();
+                });
               });
               initMap();
             }
