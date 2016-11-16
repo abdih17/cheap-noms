@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>cheap-noms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles/base.css" type="text/css">
     <link rel="stylesheet" href="/styles/layout.css" type="text/css">
     <link rel="stylesheet" href="/styles/module.css" type="text/css">
     <script id="resultsTemplate" type="text/x-handlebars-template">
-      <li><div><img src="{{image_url}}"><h2>{{name}}</h2><a href="{{url}}">Website</a><p>{{is_closed}}<br>{{address1}}</p></li>
+      <li id="resultsSection">
+        <div id="resultsContainer"><img id="resultsImage" src="{{image_url}}"><h2>{{name}}</h2><a href="{{url}}">Website</a><p>{{is_closed}}<br>{{address1}}</p>
+      </li>
     </script>
   </head>
   <body>
@@ -26,7 +29,7 @@
       <div id="map"></div>
     </section>
     <section class="mainSection" id="listSection" type="text/x-handlebars-template">
-    <ul id="results"><li></li></ul>
+      <ul id="results"><li></li></ul>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
