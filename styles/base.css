@@ -35,6 +35,19 @@ h2 {
   font-size: 20px;
 }
 
+p {
+  font-size: 0.5em;
+  margin-left: 2px;
+}
+#webLink {
+  color: black;
+  font-size: 0.5em;
+  margin-left: 2px;
+}
+#webLink:hover {
+  color: green;
+}
+
 /*header:after {
     position: absolute;
     top: 0;
