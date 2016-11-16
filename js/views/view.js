@@ -39,17 +39,17 @@ function initMap(locationIndex){
     });
     return marker;
   });
-  // if(typeof locationIndex === 'number'){
+  if(typeof locationIndex === 'number'){
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
       center: {lat: markers[locationIndex].getPosition().lat(), lng: markers[locationIndex].getPosition().lng()}
     });
-  // }
-  // else{
-  //   var map = new google.maps.Map(document.getElementById('map'), {
-  //     zoom: 15,
-  //   });
-  // };
+  }
+  else{
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+    });
+  };
   var bounds = new google.maps.LatLngBounds();
   markers.forEach(function(marker){
     google.maps.event.addListener(marker, 'mouseover', function() {
