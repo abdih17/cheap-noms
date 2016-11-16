@@ -1,21 +1,9 @@
 #map {
   width: 100%;
   height: 500px;
+  margin-left: 20px;
 }
-
-h2 {
-  text-align: center;
-  /*border: black;*/
-}
-
-ul {
-  list-style: none;
-  width: 50%;
-  height: 50%;
-  background-color: grey;
-}
-
-/** {
+* {
     margin: 0;
     padding: 0;
     border: none;
@@ -28,13 +16,26 @@ body {
 }
 
 header {
-    position: relative;
-    height: 252px;
+    /*position: relative;
+    height: 20%;
     width: 100%;
+    padding: 0;*/
     background-color: rgb(251, 215, 33);
 }
+.hello {
+  color:darkgrey;
+  /*font-size: 75px;*/
+}
 
-header:after {
+ul{
+  padding: 50px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+/*header:after {
     position: absolute;
     top: 0;
     right: 0;
@@ -47,32 +48,32 @@ header:after {
     background-position: 100%;
     /*height: 500px;*/
     /*max-width: 100%;
-    opacity: .5;
-}*/
+    opacity: .5;*/
+/*}*/
 
 /*#heroBackgroundImage {
    position: relative;
 }*/
 
-h3 {
 
-}
-
-#color-overlay {
+/*#color-overlay {
    position: absolute;
    top: 0;
    left: 0;
    z-index: 1;
    width: 100%;
-   height: 700px;
+   height: 0;
    background-color: black;
    opacity: 0.3;
 }
 
+#heroBackImage{
+  height: 10px;
+}
 
 #heroImage {
   width: 110%;
-  height: 700px;
+  height: 500px;
   position: relative;
   top: -500px;
   z-index: 0;
@@ -90,10 +91,10 @@ h3 {
 
 .cf{
   zoom:1;
-}
+}*/
 
 /*-------------------------------------*/
-
+/*
 .submissionForm {
   width: 450px;
   padding: 15px;
@@ -146,7 +147,7 @@ h3 {
   overflow: visible;
   position: relative;
   /*float: right;*/
-  border: 0;
+  /*border: 0;
   padding: 0;
   cursor: pointer;
   height: 40px;
@@ -157,8 +158,8 @@ h3 {
   background: #d83c3c;
   border-radius: 0 3px 3px 0;
   text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
-}
-
+}*/
+/*
 .submissionForm button:hover{
   background: #e54040;
 }
@@ -212,7 +213,9 @@ h3 {
 #mapButton{
   margin-left: 340px;
   margin-top: -200px;
->>>>>>> 85a7a56e2df032e0ecf970bdc25459fdd2907cb0
+
+}*/
+
 }
 
 /* disables google maps infowindow "x" button */
