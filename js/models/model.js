@@ -3,7 +3,7 @@
 
   restaurantObj.requestRepos = function(location, term, callback) {
     if(!location){
-      alert('You must enter a valid location');
+      alert('You must enter a valid location.');
     }
     else{
       $.when(
@@ -31,7 +31,7 @@
               initMap();
             }
             else{
-              alert('no results');
+              alert('no results!');
             }
           },
           error: function(data){
