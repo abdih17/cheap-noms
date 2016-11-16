@@ -1,7 +1,218 @@
 #map {
   width: 100%;
   height: 500px;
+}
 
+h2 {
+  text-align: center;
+  /*border: black;*/
+}
+
+ul {
+  list-style: none;
+  width: 50%;
+  height: 50%;
+  background-color: grey;
+}
+
+/** {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: relative;
+    height: 252px;
+    width: 100%;
+    background-color: rgb(251, 215, 33);
+}
+
+header:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-image: url("../images/P1000955.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    /*height: 500px;*/
+    /*max-width: 100%;
+    opacity: .5;
+}*/
+
+/*#heroBackgroundImage {
+   position: relative;
+}*/
+
+h3 {
+
+}
+
+#color-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   width: 100%;
+   height: 700px;
+   background-color: black;
+   opacity: 0.3;
+}
+
+
+#heroImage {
+  width: 110%;
+  height: 700px;
+  position: relative;
+  top: -500px;
+  z-index: 0;
+  margin-left: 0;
+}
+
+.cf:before, .cf:after{
+  content:"";
+  display:table;
+}
+
+.cf:after{
+  clear:both;
+}
+
+.cf{
+  zoom:1;
+}
+
+/*-------------------------------------*/
+
+.submissionForm {
+  width: 450px;
+  padding: 15px;
+  margin: 150px auto 50px auto;
+  position: relative;
+  top: -50px;
+  z-index: 2;
+  background: #000;
+  background: rgba(0,0,0,.0);
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.2) inset, 0 1px 0 rgba(255,255,255,.6);
+}
+
+.submissionForm input {
+  width: 330px;
+  height: 20px;
+  padding: 10px 5px;
+  float: left;
+  font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  border: 0;
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+}
+
+.submissionForm input:focus {
+  outline: 0;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+
+.submissionForm input::-webkit-input-placeholder {
+ color: #999;
+ font-weight: normal;
+ font-style: italic;
+}
+
+.submissionForm input:-moz-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.submissionForm input:-ms-input-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.submissionForm button {
+  overflow: visible;
+  position: relative;
+  /*float: right;*/
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 110px;
+  font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  color: #fff;
+  text-transform: uppercase;
+  background: #d83c3c;
+  border-radius: 0 3px 3px 0;
+  text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}
+
+.submissionForm button:hover{
+  background: #e54040;
+}
+
+.submissionForm button:active,
+.submissionForm button:focus{
+  background: #c42f2f;
+}
+
+.submissionForm button:before {
+  content: '';
+  position: absolute;
+  border-width: 8px 8px 8px 0;
+  border-style: solid solid solid none;
+  border-color: transparent #d83c3c transparent;
+  top: 12px;
+  left: -6px;
+}
+
+.submissionForm button:hover:before{
+  border-right-color: #e54040;
+}
+
+.submissionForm button:focus:before{
+  border-right-color: #c42f2f;
+}
+
+.submissionForm button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.byline p{
+  text-align:center;
+  color:#c6c6c6;
+  font: bold 18px Arial, Helvetica, Sans-serif;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.byline p a{
+  color:#d83c3c;
+  text-decoration:none;
+}
+
+#outerContainer{
+  border: 0;
+  margin: 0;
+  padding: 0px 100px;
+}
+
+#mapButton{
+  margin-left: 340px;
+  margin-top: -200px;
+>>>>>>> 85a7a56e2df032e0ecf970bdc25459fdd2907cb0
 }
 
 /* disables google maps infowindow "x" button */
