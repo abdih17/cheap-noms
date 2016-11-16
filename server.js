@@ -7,7 +7,8 @@ var proxyYelp = function(request, response) {
   console.log('Routing Yelp request for ', request.params[0]);
   (requestProxy({
     url: 'https://api.yelp.com/' + request.params[0],
-    headers: {'Authorization': 'Bearer JjSqeSEGUZUgZOaO-zPkA84bWBTreYXUgnVrOhFbVRxKJvDpfNgqiN9Hpdu6o7AqUO3qXXto2_5oCtXI2H7vohk9JAZpWBC9U7gpNHQpoCsVd1u5F6v-1hNkJAcmWHYx'}
+    headers: {'Authorization': 'Bearer ' + process.env.YELP_TOKEN}
+
   }))(request, response);
   console.log(response);
 };
