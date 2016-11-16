@@ -214,3 +214,8 @@ h3 {
   margin-top: -200px;
 >>>>>>> 85a7a56e2df032e0ecf970bdc25459fdd2907cb0
 }
+
+/* disables google maps infowindow "x" button */
+img[src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {
+    display: none;
+}

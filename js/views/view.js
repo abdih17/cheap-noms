@@ -26,16 +26,29 @@ function initMap(location){
   markers = obj.results.map(function(result){
     var marker = new google.maps.Marker({
       position: {lat: result.coordinates.lat, lng: result.coordinates.lng},
-      title: result.name + ' ' + result.address1 + ' ' + result.is_closed
+      title: result.name
     });
     marker.setMap(map);
 
     var infowindow = new google.maps.InfoWindow({
-      content: marker.title
+      content: marker.title,
     });
 
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(marker, 'mouseover', function() {
       infowindow.open(map,marker);
+    });
+    google.maps.event.addListener(marker, 'mouseout', function() {
+      if(!infowindow.isOpen){
+        infowindow.close(map,marker);
+      }
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+      if(!infowindow.isOpen){
+        infowindow.isOpen = true;
+      }
+      else{
+        infowindow.isOpen = false;
+      }
     });
     return marker;
   });
