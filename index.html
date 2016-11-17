@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <title>cheap-noms</title>
     <link rel="stylesheet" href="/styles/base.css" type="text/css">
+    <link rel="stylesheet" href="/styles/base2.css" type="text/css">
     <link rel="stylesheet" href="/styles/layout.css" type="text/css">
     <link rel="stylesheet" href="/styles/module.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/2866858701.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Bubblegum+Sans|Delius+Unicase:700|Fontdiner+Swanky|Fredoka+One|Patua+One|Permanent+Marker|Rakkas|Rancho|Righteous|Walter+Turncoat" rel="stylesheet">
     <script id="resultsTemplate" type="text/x-handlebars-template">
       <li><div id="resultsContainer">
         <img id="resultsImage" src="{{image_url}}">
@@ -18,17 +19,27 @@
   </head>
   <body>
     <header>
-      <nav class="navigation">
-        <ul>
-          <!-- login button -->
-          <li><a id="about" href="/about">About Us</a></li>
-          <li><a id="join" href="/join">Join</a></li>
-          <li><a id="logIn" href="/logIn">Log In</a></li>
-        </ul>
-        <!-- Hamburger Menu
-        <div class="nav-icon"><i class="fa fa-bars" aria-hidden="true"></i></div> -->
-      </nav>
-    </header>
+      <ul class="topnav" id="myTopnav">
+        <li><a class="home" href="#home">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li class="icon">
+          <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+        </li>
+        <section class="formSection2">
+          <fieldset id="outerContainer2">
+            <form class="submissionForm2 cf2" action="index.html" method="post2">
+              <input placeholder="Location" id="locationInput2" type="text2" name="location" value="">
+              <input placeholder="Cuisine or Dish" id="termInput2" type="text" name="searchTerm" value="">
+              <button id="listButton2" type="button" name="button">Search</button>
+              <button id="mapButton2" type="button" name="button">Map</button>
+            </form>
+          </fieldset>
+        </section>
+      </ul>
+      </header>
+
     <div class="intro-container">
       <h1 class="hello">Cheap Noms</h1>
     </div>
