@@ -1,24 +1,35 @@
 'use strict';
 
+var resultsController = {};
+
+resultsController.revealList = function(){
+  $('.mainSection').hide();
+  $('.results').show();
+};
+
+resultsController.revealMap = function(){
+  $('.mainSection').hide();
+  $('#mapSection').show();
+};
+
 $('#listButton').on('click', function(e) {
   clickFunction();
-  $('.mainSection').hide();
-  $('#listSection').show();
+  resultsController.revealList();
+  console.log(resultsController);
 });
 
 $('#mapButton').on('click', function(e) {
   clickFunction();
-  $('.mainSection').hide();
-  $('#mapSection').show();
+  resultsController.revealMap();
 });
 
 $('form.submissionForm').on('keydown', function(e){
   if(e.target === $('form.submissionForm').children()[0] ||
   e.target === $('form.submissionForm').children()[1]){
     if(e.keyCode === 13){
+      e.preventDefault();
       clickFunction();
-      $('.mainSection').hide();
-      $('#listSection').show();
+      resultsController.revealList();
     }
   }
 });

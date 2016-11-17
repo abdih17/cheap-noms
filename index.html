@@ -24,16 +24,16 @@
     </script>
 </head>
 <body>
-    <header>
+    <header class="mainSection">
       <ul class="topnav" id="myTopnav">
-        <li><a class="home" href="#home">Home</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><a class="home" href=" /home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
         <li><a href="#">Join</a></li>
         <li><a href="#">Sign In</a></li>
         <li class="icon">
           <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
         </li>
-        <section class="formSection2">
+        <!-- <section class="formSection2">
           <fieldset id="outerContainer2">
             <form class="submissionForm2 cf2" action="index.html" method="post2">
               <input placeholder="Location" id="locationInput2" type="text2" name="location" value="">
@@ -42,46 +42,46 @@
               <button id="mapButton2" type="button" name="button">Map</button>
             </form>
           </fieldset>
-        </section>
+        </section> -->
       </ul>
+      <div class="intro-container" class="mainSection">
+        <h1 class="hello">Cheap Noms</h1>
+      </div>
       </header>
 
-    <div class="intro-container">
-      <h1 class="hello">Cheap Noms</h1>
-    </div>
-  <main>
+  <main class='mainSection'>
 
     <div id="color-overlay"></div>
 
     <img id="heroImage" src="/images/restaurant.jpeg">
 
-    <section class="formSection">
-      <fieldset id="outerContainer">
-        <form class="submissionForm cf" action="index.html" method="post">
-          <input placeholder="Location" id="locationInput" type="text" name="location" value="">
-          <input placeholder="Cuisine or Dish" id="termInput" type="text" name="searchTerm" value="">
-          <button id="listButton" type="button" name="button">Search</button>
-          <button id="mapButton" type="button" name="button">Map</button>
-        </form>
-      </fieldset>
-    </section>
-
-    <section class="mainSection" id="mapSection">
-      <div id="map"></div>
-    </section>
-
-    <section class="mainSection" id="listSection" type="text/x-handlebars-template">
-      <ul id="results"></ul>
-    </section>
-
   </main>
+  <section class="mainSection" id="mapSection">
+    <div id="map"></div>
+  </section>
 
+  <section id="listSection" class="results" class="mainSection">
+    <ul id="results"></ul>
+  </section>
+  <section class="formSection" class="mainSection" href="/results">
+    <fieldset id="outerContainer">
+      <form class="submissionForm cf" action="index.html" method="post">
+        <input placeholder="Location" id="locationInput" type="text" name="location" value="">
+        <input placeholder="Cuisine or Dish" id="termInput" type="text" name="searchTerm" value="">
+        <button id="listButton" type="button" name="button">Search</button>
+        <button id="mapButton" type="button" name="button">Map</button>
+      </form>
+    </fieldset>
+  </section>
+
+    <!-- <script src="/page.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpn-4XBudFb2C-6--K9ScLCf7vh2lPHbI"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
 
     <script type="text/javascript" src="js/controllers/controller.js"></script>
+    <script type="text/javascript" src="js/controllers/routes.js"></script>
     <script type="text/javascript" src="js/views/view.js"></script>
     <script type="text/javascript" src="js/models/model.js"></script>
   </body>
