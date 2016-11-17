@@ -33,6 +33,21 @@ body {
   z-index: 3;
 }
 
+/*DANNY*/
+p {
+  font-size: 0.5em;
+  margin-left: 2px;
+}
+#webLink {
+  color: black;
+  font-size: 0.5em;
+  margin-left: 2px;
+}
+#webLink:hover {
+  color: green;
+}
+
+
 /*HERO IMAGE & OVERLAY*/
 #heroImage{
   position: relative;

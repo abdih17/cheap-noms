@@ -12,22 +12,11 @@
     <script id="resultsTemplate" type="text/x-handlebars-template">
       <li><div id="resultsContainer">
         <img id="resultsImage" src="{{image_url}}">
-        <h2>{{name}}</h2><a href="{{url}}">Website</a><p>{{is_closed}}<br>{{address1}}</p></li>
+        <!-- <h2>{{name}}</h2><a href="{{url}}">Website</a><p>{{is_closed}}<br>{{address1}}</p></li> -->
+        <a id="webLink" href="{{url}}">{{name}}</a><p>{{is_closed}}<br>{{address1}}</p></li>
     </script>
-</head>
-<body>
-
-    <!-- <section class="formSection">
-      <fieldset>
-        <form class="submissionForm" action="index.html" method="post">
-          <input id="locationInput" type="text" placeholder="Location..." name="location" value="">
-          <input id="termInput" type="text" placeholder="Cuisine or Dish..." name="searchTerm" value="">
-          <button id="listButton" type="button" name="button">Search</button>
-          <button id="mapButton" type="submit" name="button">Show on Map</button>
-        </form>
-      </fieldset>
-    </section> -->
-
+  </head>
+  <body>
     <header>
       <nav class="navigation">
         <ul>
