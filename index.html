@@ -11,13 +11,19 @@
     <script src="https://use.fontawesome.com/2866858701.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Bubblegum+Sans|Delius+Unicase:700|Fontdiner+Swanky|Fredoka+One|Patua+One|Permanent+Marker|Rakkas|Rancho|Righteous|Walter+Turncoat" rel="stylesheet">
     <script id="resultsTemplate" type="text/x-handlebars-template">
-      <li><div id="resultsContainer">
-        <img id="resultsImage" src="{{image_url}}">
-        <!-- <h2>{{name}}</h2><a href="{{url}}">Website</a><p>{{is_closed}}<br>{{address1}}</p></li> -->
-        <a id="webLink" href="{{url}}">{{name}}</a><p>{{is_closed}}<br>{{address1}}</p></li>
+      <li id="resultsSection">
+        <div id="resultsContainer">
+          <img id="resultsImage" src="{{image_url}}">
+          <h2>{{name}}</h2>
+          <a id="webLink" href="{{url}}">Website</a>
+          <p>{{is_closed}}<br>
+            {{address1}}</p>
+          <button class="showMapButton">Show on Map</button>
+        </div>
+      </li>
     </script>
-  </head>
-  <body>
+</head>
+<body>
     <header>
       <ul class="topnav" id="myTopnav">
         <li><a class="home" href="#home">Home</a></li>
@@ -73,11 +79,10 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpn-4XBudFb2C-6--K9ScLCf7vh2lPHbI"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.googlemap/1.5/jquery.googlemap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+
     <script type="text/javascript" src="js/controllers/controller.js"></script>
     <script type="text/javascript" src="js/views/view.js"></script>
     <script type="text/javascript" src="js/models/model.js"></script>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpn-4XBudFb2C-6--K9ScLCf7vh2lPHbI&callback=initMap"
-   async defer></script> -->
   </body>
 </html>

@@ -8,7 +8,7 @@
     else{
       $.when(
         $.ajax({
-          url: '/yelp/v3/businesses/search?term=' + term + '&location=' + location + '&radius=3218&categories=restaurants&price=1&is_closed=true&sort_by=rating&limit=50',
+          url: '/yelp/v3/businesses/search?term=' + term + '&location=' + location + '&radius=3218&categories=restaurants&price=1&is_closed=true&sort_by=rating&limit=20',
           type: 'GET',
           success: function(data) {
             data.businesses.forEach(function(business){
@@ -22,7 +22,16 @@
 
               restaurantObj.allRepos = data;
               restaurantObj.allRepos.businesses.forEach(function(options) {
-                obj.results.push(new Opt(options.name, options.image_url, options.is_closed, options.location, options.url, {lat: options.coordinates.latitude, lng: options.coordinates.longitude}));
+                obj.results.push(new Opt(
+                  options.name,
+                  options.image_url,
+                  options.is_closed,
+                  options.location,
+                  options.url,
+                  {lat: options.coordinates.latitude, lng: options.coordinates.longitude},
+                  options.rating,
+                  options.distance,
+                  options.review_count));
               });
               console.log(restaurantObj.allRepos);
               obj.results.forEach(function(result){
