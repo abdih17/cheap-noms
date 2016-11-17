@@ -1,5 +1,9 @@
 'use strict';
 
+$(document).ready(function(){
+  $('#listSection, #mapSection').hide();
+});
+
 var resultsController = {};
 
 resultsController.revealList = function(){
