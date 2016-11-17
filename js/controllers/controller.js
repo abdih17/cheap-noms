@@ -1,5 +1,9 @@
 'use strict';
 
+$(document).ready(function(){
+  $('#listSection, #mapSection').hide();
+});
+
 var resultsController = {};
 
 resultsController.revealList = function(){
@@ -38,4 +42,6 @@ var clickFunction = function () {
   var location = $('#locationInput').val();
   var term = $('#termInput').val();
   restaurantObj.requestRepos(location, term);
+  var body = document.getElementById('body');
+  body.style.overflow = 'visible';
 };

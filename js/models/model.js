@@ -40,6 +40,8 @@
                 $('#results li:last-child').find('.showMapButton').on('click', function(){
                   $('#mapSection').show();
                   initMap(obj.results.indexOf(result));
+                  var results = document.getElementById('results');
+                  results.style.top = '600px';
                 });
               });
               initMap();
