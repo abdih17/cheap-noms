@@ -4,7 +4,7 @@ var resultsController = {};
 
 resultsController.revealList = function(){
   $('.mainSection').hide();
-  $('.results').show();
+  $('#listSection').show();
 };
 
 resultsController.revealMap = function(){
