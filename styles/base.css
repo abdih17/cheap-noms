@@ -22,7 +22,7 @@ body {
 .hello {
   color:white;
   /*font-size: 75px;*/
-  /*font-family: 'Bubblegum Sans', sans-serif;*/
+  font-family: 'Bubblegum Sans', sans-serif;
   /*font-family: 'Rancho', cursive;*/
   /*font-family: 'Delius Unicase', cursive;*/
   /*font-family: 'Walter Turncoat', cursive;*/
@@ -30,7 +30,7 @@ body {
   /*font-family: 'Fredoka One', cursive;*/
   /*font-family: 'Rakkas', cursive;*/
   /*font-family: 'Bubblegum Sans', cursive;*/
-  font-family: 'Fontdiner Swanky', cursive;
+  /*font-family: 'Fontdiner Swanky', cursive;*/
   font-size: 90px;
   padding: 0;
   text-align: center;
