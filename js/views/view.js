@@ -4,16 +4,39 @@ var obj = {results: []};
 var markers = [];
 var maxReviewCount = 0;
 
-function Opt(name, image_url, is_closed, location, url, coordinates, rating, distance, reviewCount){
+function Opt(name, image_url, is_closed, location, url, coordinates, rating, distance, reviewCount, phone){
+  this.displayIsClosed = function(isClosed){
+    if(isClosed){
+      return 'closed';
+    }
+    else{
+      return 'open until ';
+    }
+  };
+  this.displayPhone = function(){
+    if(phone){
+      return '(' + phone.slice(2, 5) + ') ' + phone.slice(5, 8) + '-' + phone.slice(8);
+    }
+    else return '';
+  };
+  this.displayCompactPhone = function(){
+    if(phone){
+      return 'tel:' + phone;
+    }
+  };
   this.name = name;
   this.coordinates = coordinates;
   this.image_url = image_url;
-  this.is_closed = is_closed;
+  this.is_closed = this.displayIsClosed(is_closed);
   this.address1 = location.address1;
   this.url = url;
   this.rating = rating;
   this.distance = distance;
   this.reviewCount = reviewCount;
+  this.city = location.city;
+  this.state = location.state;
+  this.phone = this.displayPhone();
+  this.compactPhone = this.displayCompactPhone();
   this.toHTML = function(){
     var template = $('#resultsTemplate').html();
     var compile = Handlebars.compile(template);
@@ -32,12 +55,13 @@ function initMap(locationIndex){
       rating: result.rating,
       distance: result.distance,
       reviewCount: result.reviewCount,
+      phone: result.phone,
+      compactPhone: result.compactPhone,
       chartObj: {
         type: 'bar',
         data: {
           labels: ['Rating', 'Popularity', 'Distance'],
           datasets: [{
-            label: 'stats',
             data: [2.5 * (result.rating - 3), 5 * Math.log(result.reviewCount) / Math.log(maxReviewCount), 5 - result.distance * 4 / 3218],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
@@ -53,6 +77,9 @@ function initMap(locationIndex){
           }]
         },
         options: {
+          legend: {
+            display: false
+          },
           scales: {
             yAxes: [{
               ticks: {
@@ -81,30 +108,31 @@ function initMap(locationIndex){
   };
   var bounds = new google.maps.LatLngBounds();
   markers.forEach(function(marker){
-    var infowindow = new google.maps.InfoWindow({
-      content: '<div>' + marker.title + '</div>' +
-      // '<div>' + marker.position + '</div>' +
-      // '<div>' + marker.address + '</div>' +
-      // '<div>' + marker.is_closed + '</div>' +
-      '<canvas id="chart' + markers.indexOf(marker) + '" width="100" height="100"></canvas>'
+    marker.infowindow = new google.maps.InfoWindow({
+      content: '<div>' + marker.title + '</div>'
     });
 
     google.maps.event.addListener(marker, 'click', function() {
-      if(!infowindow.isOpen){
-        infowindow.isOpen = true;
+      if(!marker.infowindow.isOpen){
+        marker.ctx = $('#chart' + markers.indexOf(marker));
+        marker.chart = new Chart(marker.ctx, marker.chartObj);
+        marker.infowindow.content = '<div>' + marker.title + '</div>' +
+          '<div>' + marker.address + '</div>' +
+          '<a href="' + marker.compactPhone + '"><div>' + marker.phone + '</div></a>' +
+          '<canvas class="infoChart" id="chart' + markers.indexOf(marker) + '"></canvas>';
+        marker.infowindow.isOpen = true;
       }
       else{
-        infowindow.isOpen = false;
+        marker.infowindow.content = '<div>' + marker.title + '</div>';
+        marker.infowindow.isOpen = false;
       }
     });
     google.maps.event.addListener(marker, 'mouseover', function() {
-      infowindow.open(map,marker);
-      var ctx = $('#chart' + markers.indexOf(marker));
-      var chart = new Chart(ctx, marker.chartObj);
+      marker.infowindow.open(map,marker);
     });
     google.maps.event.addListener(marker, 'mouseout', function() {
-      if(!infowindow.isOpen){
-        infowindow.close(map,marker);
+      if(!marker.infowindow.isOpen){
+        marker.infowindow.close(map,marker);
       }
     });
 
