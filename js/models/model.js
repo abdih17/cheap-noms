@@ -31,7 +31,8 @@
                   {lat: options.coordinates.latitude, lng: options.coordinates.longitude},
                   options.rating,
                   options.distance,
-                  options.review_count));
+                  options.review_count,
+                  options.phone));
               });
               console.log(restaurantObj.allRepos);
               obj.results.forEach(function(result){

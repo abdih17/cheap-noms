@@ -21,16 +21,7 @@ body {
 /*HERO TEXT*/
 .hello {
   color:white;
-  /*font-size: 75px;*/
   font-family: 'Bubblegum Sans', sans-serif;
-  /*font-family: 'Rancho', cursive;*/
-  /*font-family: 'Delius Unicase', cursive;*/
-  /*font-family: 'Walter Turncoat', cursive;*/
-  /*font-family: 'Righteous', cursive;*/
-  /*font-family: 'Fredoka One', cursive;*/
-  /*font-family: 'Rakkas', cursive;*/
-  /*font-family: 'Bubblegum Sans', cursive;*/
-  /*font-family: 'Fontdiner Swanky', cursive;*/
   font-size: 90px;
   padding: 0;
   text-align: center;
@@ -165,6 +156,7 @@ p {
   text-transform: uppercase;
   background: #FFBC36;
   text-shadow: 0 -1px 0 rgba(255, 255, 255, .9);
+  z-index: 1;
 }
 
 #listButton{
