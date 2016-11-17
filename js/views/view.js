@@ -119,12 +119,20 @@ function initMap(locationIndex){
       bounds.extend(marker.getPosition());
     }
   });
-
   if(typeof locationIndex !== 'number'){
     map.fitBounds(bounds);
   }
   if(map.zoom > 15){
     map.zoom = 15;
+  }
+}
+
+function myFunction() {
+  var x = document.getElementById('myTopnav');
+  if (x.className === 'topnav') {
+    x.className += ' responsive';
+  } else {
+    x.className = 'topnav';
   }
 }
 
