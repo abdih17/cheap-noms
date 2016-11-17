@@ -17,31 +17,34 @@ function Opt(name, image_url, is_closed, location, url, coordinates){
   };
 };
 
-function initMap(location){
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: location,
-    zoom: 15
-  });
+function initMap(locationIndex){
   markers = [];
   markers = obj.results.map(function(result){
     var marker = new google.maps.Marker({
       position: {lat: result.coordinates.lat, lng: result.coordinates.lng},
-      title: result.name
+      title: result.name,
+      address: result.address1,
+      is_closed: result.is_closed
     });
-    marker.setMap(map);
-
+    return marker;
+  });
+  if(typeof locationIndex === 'number'){
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: {lat: markers[locationIndex].getPosition().lat(), lng: markers[locationIndex].getPosition().lng()}
+    });
+  }
+  else{
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+    });
+  };
+  var bounds = new google.maps.LatLngBounds();
+  markers.forEach(function(marker){
     var infowindow = new google.maps.InfoWindow({
-      content: marker.title,
+      content: marker.title + ' ' + marker.position + ' ' + marker.address + ' ' + marker.is_closed
     });
 
-    google.maps.event.addListener(marker, 'mouseover', function() {
-      infowindow.open(map,marker);
-    });
-    google.maps.event.addListener(marker, 'mouseout', function() {
-      if(!infowindow.isOpen){
-        infowindow.close(map,marker);
-      }
-    });
     google.maps.event.addListener(marker, 'click', function() {
       if(!infowindow.isOpen){
         infowindow.isOpen = true;
@@ -50,13 +53,32 @@ function initMap(location){
         infowindow.isOpen = false;
       }
     });
-    return marker;
+    google.maps.event.addListener(marker, 'mouseover', function() {
+      infowindow.open(map,marker);
+    });
+    google.maps.event.addListener(marker, 'mouseout', function() {
+      if(!infowindow.isOpen){
+        infowindow.close(map,marker);
+      }
+    });
+
+    if(typeof locationIndex === 'number'){
+      if(locationIndex === markers.indexOf(marker)){
+        marker.setMap(map);
+        map.setCenter(marker.getPosition());
+      }
+    }
+    else{
+      marker.setMap(map);
+      bounds.extend(marker.getPosition());
+    }
   });
-  var bounds = new google.maps.LatLngBounds();
-  markers.forEach( function (marker){
-    bounds.extend(marker.getPosition());
-  });
-  map.fitBounds(bounds);
+  if(typeof locationIndex !== 'number'){
+    map.fitBounds(bounds);
+  }
+  if(map.zoom > 15){
+    map.zoom = 15;
+  }
 }
 
 initMap();
