@@ -10,7 +10,7 @@ function Opt(name, image_url, is_closed, location, url, coordinates, rating, dis
       return 'closed';
     }
     else{
-      return 'open until ';
+      return 'open now';
     }
   };
   this.displayPhone = function(){

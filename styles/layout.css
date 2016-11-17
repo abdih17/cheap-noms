@@ -2,7 +2,7 @@
 /*Changed width and height for #resultsContainer.*/
 #resultsContainer {
   width: 250px;
-  height: 250px;
+  height: 300px;
   margin: 15px;
   float: left;
   overflow: 0 auto;
