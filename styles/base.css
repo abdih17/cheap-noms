@@ -22,26 +22,26 @@ body {
 .hello {
   color:white;
   /*font-size: 75px;*/
-  font-family: 'Roboto', sans-serif;
-  font-size: 100px;
+  /*font-family: 'Bubblegum Sans', sans-serif;*/
+  /*font-family: 'Rancho', cursive;*/
+  /*font-family: 'Delius Unicase', cursive;*/
+  /*font-family: 'Walter Turncoat', cursive;*/
+  /*font-family: 'Righteous', cursive;*/
+  /*font-family: 'Fredoka One', cursive;*/
+  /*font-family: 'Rakkas', cursive;*/
+  /*font-family: 'Bubblegum Sans', cursive;*/
+  font-family: 'Fontdiner Swanky', cursive;
+  font-size: 90px;
   padding: 0;
   text-align: center;
 }
 .intro-container{
   position: relative;
-  top: 80px;
-  z-index: 3;
+  top: 50px;
+  z-index: 4;
 }
 
-<<<<<<< HEAD
-/*HERO IMAGE & OVERLAY*/
-#heroImage{
-  position: relative;
-  top: -740px;
-  z-index: 0;
-  width: 100%;
-  height: 780px;
-=======
+/*DANNY*/
 p {
   font-size: 0.5em;
   margin-left: 2px;
@@ -55,45 +55,22 @@ p {
   color: green;
 }
 
-/*header:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: "";
-    background-image: url("../images/P1000955.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 100%;
-    /*height: 500px;*/
-    /*max-width: 100%;
-    opacity: .5;*/
-/*}*/
 
-/*#heroBackgroundImage {
-   position: relative;
-}*/
-
-
-/*#color-overlay {
-   position: absolute;
-   top: 0;
-   left: 0;
-   z-index: 1;
-   width: 100%;
-   height: 0;
-   background-color: black;
-   opacity: 0.3;
->>>>>>> master
+/*HERO IMAGE & OVERLAY*/
+#heroImage{
+  position: relative;
+  top: -760px;
+  z-index: 1;
+  width: 100%;
+  height: 770px;
 }
 
 #color-overlay {
   margin: 0;
   position: relative;
-  top: -110px;
-  left: 120px;
-  z-index: 2;
+  top: -160px;
+  left: 130px;
+  z-index: 3;
   align-text: center;
   width: 80%;
   height: 500px;
@@ -104,8 +81,8 @@ p {
 /*FORM*/
 .formSection{
   position: relative;
-  top: -1200px;
-  z-index: 4;
+  top: -1230px;
+  z-index: 5;
 }
 
 .cf:before, .cf:after{
@@ -124,7 +101,7 @@ p {
   margin: 150px auto 50px auto;
   background: #000;
   background: rgba(0,0,0,.0);
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0 10px 10px rgba(0,0,0,.4) inset, 0 10px 0 rgba(0,0,0,.4);
 }
 
@@ -134,28 +111,26 @@ p {
 
 #locationInput + #termInput{
   margin-left: 20px;
-  padding-left: 20px;
 }
 
 #termInput + #listButton{
-  margin-left: 10px;
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 #listButton + #mapButton{
-  margin-left: -10px;
-  padding-left: 20px;
+  margin-left: 10px;
 }
 
 .submissionForm input {
-  width: 260px;
-  height: 20px;
+  width: 350px;
+  height: 30px;
+  margin-left: 60px;
   padding: 10px 5px;
   float: left;
   font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
   border: 0;
   background: #eee;
-  border-radius: 3px 0 0 3px;
+  border-radius: 3px 3px 3px 3px;
 }
 
 .submissionForm input:focus {
@@ -166,29 +141,39 @@ p {
 
 #outerContainer{
   margin: 0;
-  position: relative;
-  z-index: 2;
-  top: -100px;
+  position: absolute;
+  margin-top: -35px;
+  z-index: 3;
+  top: -80px;
+  left: 200px;
 }
 
 
 .submissionForm button {
   overflow: visible;
   position: relative;
-  /*float: right;*/
+  top: 60px;
+  left: 3px;
+  margin-right: 20px;
   border: 0;
   padding: 0;
   cursor: pointer;
   height: 40px;
-  width: 110px;
+  width: 210px;
   font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
   color: #fff;
   text-transform: uppercase;
-  background: #d83c3c;
-  border-radius: 0 3px 3px 0;
-  text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+  background: #FFBC36;
+  text-shadow: 0 -1px 0 rgba(255, 255, 255, .9);
 }
 
+#listButton{
+  border-radius: 0 5px 5px 0;
+}
+
+#mapButton{
+  border-radius: 5px 0 0 5px;
+}
 
 .submissionForm button:hover{
   background: #e54040;
@@ -197,16 +182,6 @@ p {
 .submissionForm button:active,
 .submissionForm button:focus{
   background: #c42f2f;
-}
-
-.submissionForm button:before {
-  content: '';
-  position: absolute;
-  border-width: 8px 8px 8px 0;
-  border-style: solid solid solid none;
-  border-color: transparent #d83c3c transparent;
-  top: 12px;
-  left: -6px;
 }
 
 .submissionForm button:hover:before{

@@ -1,0 +1,105 @@
+/*FORM*/
+.cf2:before, .cf:after{
+  content:"";
+  display:table;
+}
+
+.cf2:after{
+  clear:both;
+}
+
+.submissionForm2 {
+  width: 100%;
+  height: 40px;
+  /*padding: 15px;*/
+  /*margin: 150px auto 50px auto;*/
+  background: #000;
+  background: rgba(0,0,0,.0);
+  border-radius: 2px;
+  /*box-shadow: 0 10px 10px rgba(0,0,0,.4) inset, 0 10px 0 rgba(0,0,0,.4);*/
+}
+
+.formSection2{
+  text-align: center;
+}
+
+#locationInput2 + #termInput2{
+  margin-left: 20px;
+}
+
+#termInput2 + #listButton2{
+  margin-left: 20px;
+}
+
+#listButton2 + #mapButton2{
+  margin-left: 10px;
+}
+
+.submissionForm2 input {
+  width: 150px;
+  height: 30px;
+  /*margin-left: 60px;*/
+  /*padding: 10px 5px;*/
+  /*float: left;*/
+  font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  border: 0;
+  background: #eee;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.submissionForm2 input:focus {
+  outline: 0;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+/*
+/*#outerContainer2{
+  margin: 0;
+  position: absolute;
+  margin-top: -35px;
+  z-index: 3;
+  top: -80px;
+  left: 200px;
+}*/
+
+
+.submissionForm2 button {
+  /*overflow: visible;*/
+  position: relative;
+  top: 60px;
+  left: 3px;
+  z-index: 3;
+  display: inline-block;
+  margin-right: 20px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 60px;
+  font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  color: #fff;
+  text-transform: uppercase;
+  background: #FFBC36;
+  text-shadow: 0 -1px 0 rgba(255, 255, 255, .9);
+}
+/*
+#listButton2{
+  border-radius: 0 5px 5px 0;
+}
+
+#mapButton2{
+  border-radius: 5px 0 0 5px;
+}
+
+.submissionForm2 button:hover{
+  background: #e54040;
+}
+
+.submissionForm2 button:active,
+.submissionForm2 button:focus{
+  background: #c42f2f;
+}
+
+.submissionForm2 button:hover:before{
+  border-right-color: #e54040;
+}*/
