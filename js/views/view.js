@@ -22,20 +22,9 @@ function initMap(locationIndex){
   markers = obj.results.map(function(result){
     var marker = new google.maps.Marker({
       position: {lat: result.coordinates.lat, lng: result.coordinates.lng},
-      title: result.name
-    });
-
-    var infowindow = new google.maps.InfoWindow({
-      content: marker.title,
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-      if(!infowindow.isOpen){
-        infowindow.isOpen = true;
-      }
-      else{
-        infowindow.isOpen = false;
-      }
+      title: result.name,
+      address: result.address1,
+      is_closed: result.is_closed
     });
     return marker;
   });
@@ -52,6 +41,18 @@ function initMap(locationIndex){
   };
   var bounds = new google.maps.LatLngBounds();
   markers.forEach(function(marker){
+    var infowindow = new google.maps.InfoWindow({
+      content: marker.title + ' ' + marker.position + ' ' + marker.address + ' ' + marker.is_closed
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      if(!infowindow.isOpen){
+        infowindow.isOpen = true;
+      }
+      else{
+        infowindow.isOpen = false;
+      }
+    });
     google.maps.event.addListener(marker, 'mouseover', function() {
       infowindow.open(map,marker);
     });
