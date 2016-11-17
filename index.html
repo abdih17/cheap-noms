@@ -14,17 +14,17 @@
       <li id="resultsSection">
         <div id="resultsContainer">
           <img id="resultsImage" src="{{image_url}}">
-          <a id="webLink" href="{{url}}">
-            <h2>{{name}}</h2>
-          </a>
-          <p>{{address1}}<br>{{city}}<br>{{state}}<br><a href="{{compactPhone}}">{{phone}}</a></p>
+          <h2>{{name}}</h2>
+          <a id="webLink" href="{{url}}">Website</a>
+          <p>{{is_closed}}<br>
+            {{address1}}</p>
           <button class="showMapButton">Show on Map</button>
         </div>
       </li>
     </script>
   </head>
   <body>
-    <header>
+    <header class="mainSection">
       <ul class="topnav" id="myTopnav">
         <li><a class="home" href=" /home">Home</a></li>
         <li><a href="/about">About Us</a></li>
@@ -38,17 +38,17 @@
         <h1 class="hello">Cheap Noms</h1>
       </div>
     </header>
-    <main class="main-section">
+    <main class='mainSection'>
       <div id="color-overlay"></div>
       <img id="heroImage" src="/images/restaurant.jpeg">
     </main>
     <section class="mainSection" id="mapSection">
       <div id="map"></div>
     </section>
-    <section class="mainSection" id="listSection">
+    <section id="listSection" class="results" class="mainSection">
       <ul id="results"></ul>
     </section>
-    <section id="formSection" href="/results">
+    <section class="formSection" class="mainSection" href="/results">
       <fieldset id="outerContainer">
         <form class="submissionForm cf" action="index.html" method="post">
           <input placeholder="Location" id="locationInput" type="text" name="location" value="">
