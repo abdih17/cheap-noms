@@ -2,7 +2,7 @@
 /*Changed width and height for #resultsContainer.*/
 #resultsContainer {
   width: 250px;
-  height: 250px;
+  height: 300px;
   margin: 15px;
   float: left;
   overflow: 0 auto;
@@ -18,13 +18,14 @@
 #results {
   box-shadow: 0px 0px 5px 3px #888888;
   position: absolute;
-  top: 800px;
+  top: 0%;
   width: 90%;
   height: auto;
   padding: 5px;
   margin: 5%;
   background-color: #f1f1f1;
   opacity: 90%;
+  top: 0%;
 }
 
 .main-container{
@@ -121,5 +122,35 @@ ul.topnav li.icon {display: none;}
   position: fixed;
   top: 0;
   z-index: 1;
+
+}
+
+#aboutBackground {
+  position: fixed;
+  z-index: 0;
+}
+
+.aboutContainer {
+  /*border: 1px solid red;*/
+  background-color: rgba(255,255,255, 0.8);
+  position: relative;
+  height: 400px;
+  width: 300px;
+  margin-left: 1%;
+  float: left;
+  margin-top: 5%;
+  overflow: auto;
+
+}
+
+.aboutPics {
+  width: 250px;
+  height: 200px;
+  float: left;
+  margin: 25px;
+}
+
+#body{
+  overflow: hidden;
 
 }
