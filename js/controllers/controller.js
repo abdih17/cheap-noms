@@ -38,6 +38,14 @@ $('#apocalypseButton').on('click', function(e){
   location.reload();
 });
 
+$('#apocalypseButtonAbout').on('click', function(e){
+  window.location.href='/about.html';
+});
+
+$('#apocalypseButtonHome').on('click', function(e){
+  window.location.href='/index.html';
+});
+
 $('form.submissionForm').on('keydown', function(e){
   if(e.target === $('form.submissionForm').children()[0] ||
   e.target === $('form.submissionForm').children()[1]){
