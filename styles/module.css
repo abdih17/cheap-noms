@@ -49,3 +49,9 @@
  background-image: linear-gradient(to bottom, #fa3c3c, #db2e2e);
  text-decoration: none;
 }
+
+@media screen and (max-width: 430px) {
+  .hello {
+    font-size: 50px;
+  }
+}
