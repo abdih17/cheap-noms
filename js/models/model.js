@@ -31,7 +31,8 @@
                   {lat: options.coordinates.latitude, lng: options.coordinates.longitude},
                   options.rating,
                   options.distance,
-                  options.review_count));
+                  options.review_count,
+                  options.phone));
               });
               console.log(restaurantObj.allRepos);
               obj.results.forEach(function(result){
@@ -39,6 +40,8 @@
                 $('#results li:last-child').find('.showMapButton').on('click', function(){
                   $('#mapSection').show();
                   initMap(obj.results.indexOf(result));
+                  var results = document.getElementById('results');
+                  results.style.top = '600px';
                 });
               });
               initMap();
