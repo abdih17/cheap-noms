@@ -31,3 +31,21 @@
   text-align: center;
   font-family: 'Bubblegum Sans', sans-serif;
 }
+
+.showMapButton {
+  background: #ff5959;
+  background-image: linear-gradient(to bottom, #ff5959, #b82b2b);
+  border-radius: 20px;
+  box-shadow: 1px 3px 11px #666666;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 6px 16px 6px 16px;
+  text-decoration: none;
+  float: right;
+}
+
+.showMapButton:hover {
+ background: #fa3c3c;
+ background-image: linear-gradient(to bottom, #fa3c3c, #db2e2e);
+ text-decoration: none;
+}
