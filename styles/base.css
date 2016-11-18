@@ -36,9 +36,28 @@ body {
 }
 
 /*DANNY*/
+h1 {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: 'Bubblegum Sans', sans-serif;
+  font-size: 70px;
+  padding-top: 20px;
+}
+
+h3 {
+  text-align: center;
+  margin: 10px;
+}
+
 p {
   font-size: 0.5em;
   margin-left: 2px;
+}
+
+.aboutInfo {
+  text-align: center;
+  font-size: 1em;
 }
 #webLink {
   color: black;
