@@ -14,6 +14,9 @@ resultsController.revealList = function(){
 resultsController.revealMap = function(){
   $('.mainSection').hide();
   $('#mapSection').show();
+  $('#listSection').show();
+  var results = document.getElementById('results');
+  results.style.top = '600px';
 };
 
 $('#listButton').on('click', function(e) {
@@ -25,6 +28,10 @@ $('#listButton').on('click', function(e) {
 $('#mapButton').on('click', function(e) {
   clickFunction();
   resultsController.revealMap();
+});
+
+$('#apocalypseButton').on('click', function(e){
+  location.reload();
 });
 
 $('form.submissionForm').on('keydown', function(e){
