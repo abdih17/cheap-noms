@@ -21,8 +21,10 @@ resultsController.revealMap = function(){
 
 $('#listButton').on('click', function(e) {
   var cont = clickFunction();
-  resultsController.revealList();
-  console.log(resultsController);
+  if(cont){
+    resultsController.revealList();
+    console.log(resultsController);
+  }
 });
 
 $('#mapButton').on('click', function(e) {
