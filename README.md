@@ -1,11 +1,11 @@
 # cheap-noms
-An app that uses the yelp api to generate reviews in a easy-to-find-way.
+An app that uses the Yelp and Googele Maps api to generate food options and locations in a easy-to-find-way.
 
 User Story:
 
 User:
-Find restaurants that provide stellar food for a low price based on the cuisine.
+Find restaurants by location that provide stellar food for a low price based on the cuisine.
 
 Developer:
-Filter Yelp's API by location, price of cheap and rating of 5 stars.
+Request user input from Yelp's API by location, low price, search term and rating.
 
