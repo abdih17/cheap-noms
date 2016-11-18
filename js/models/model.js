@@ -44,6 +44,7 @@
                   var results = document.getElementById('results');
                   results.style.top = '600px';
                   document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
                 });
               });
               initMap();
@@ -70,5 +71,6 @@
   module.restaurantObj = restaurantObj;
   $(window).on('unload', function(){
     document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   });
 })(window);
