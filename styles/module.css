@@ -103,16 +103,16 @@
 }
 
 #apocalypseButtonAbout button:hover{
-  background: #ff5959 !important;
+  background: white !important;
 }
 
 #apocalypseButtonAbout button:active,
 #apocalypseButtonAbout button:focus{
-  background: #c42f2f !important;
+  background: white !important;
 }
 
 #apocalypseButtonAbout button:hover:before{
-  border-right-color: #e54040 !important;
+  border-right-color: white !important;
 }
 
 #apocalypseButtonHome {
