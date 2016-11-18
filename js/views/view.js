@@ -64,14 +64,14 @@ function initMap(locationIndex){
           datasets: [{
             data: [2.5 * (result.rating - 3), 5 * Math.log(result.reviewCount) / Math.log(maxReviewCount), 5 - result.distance * 4 / 3218],
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
+              'rgba(255, 0, 0, 0.2)',
+              'rgba(0, 0, 255, 0.2)',
+              'rgba(0, 1550, 0, 0.2)',
             ],
             borderColor: [
-              'rgba(255,99,132,1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(75, 192, 192, 1)',
+              'rgba(255, 0, 0, 1)',
+              'rgba(0, 0, 255, 1)',
+              'rgba(0, 255, 0, 1)',
             ],
             borderWidth: 1
           }]
@@ -114,22 +114,24 @@ function initMap(locationIndex){
 
     google.maps.event.addListener(marker, 'click', function() {
       if(!marker.infowindow.isOpen){
-        marker.ctx = $('#chart' + markers.indexOf(marker));
-        marker.chart = new Chart(marker.ctx, marker.chartObj);
-        marker.infowindow.content = '<div>' + marker.title + '</div>' +
+        marker.infowindow.setContent('<div>' + marker.title + '</div>' +
           '<div>' + marker.address + '</div>' +
           '<a href="' + marker.compactPhone + '"><div>' + marker.phone + '</div></a>' +
-          '<canvas class="infoChart" id="chart' + markers.indexOf(marker) + '"></canvas>';
+          '<canvas class="infoChart" id="chart' + markers.indexOf(marker) + '"></canvas>');
+        marker.ctx = $('#chart' + markers.indexOf(marker));
+        marker.chart = new Chart(marker.ctx, marker.chartObj);
         marker.infowindow.isOpen = true;
       }
       else{
-        marker.infowindow.content = '<div>' + marker.title + '</div>';
+        marker.infowindow.setContent('<div>' + marker.title + '</div>');
         marker.infowindow.isOpen = false;
       }
     });
+
     google.maps.event.addListener(marker, 'mouseover', function() {
       marker.infowindow.open(map,marker);
     });
+
     google.maps.event.addListener(marker, 'mouseout', function() {
       if(!marker.infowindow.isOpen){
         marker.infowindow.close(map,marker);

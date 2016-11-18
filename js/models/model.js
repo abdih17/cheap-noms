@@ -4,6 +4,7 @@
   restaurantObj.requestRepos = function(location, term, callback) {
     if(!location){
       alert('You must enter a valid location.');
+      return false;
     }
     else{
       $.when(
@@ -56,6 +57,7 @@
           }
         })
       ).done(callback);
+      return true;
     }
   };
 
