@@ -9,7 +9,7 @@
     else{
       $.when(
         $.ajax({
-          url: '/yelp/v3/businesses/search?term=' + term + '&location=' + location + '&radius=3218&categories=restaurants&price=1&is_closed=true&sort_by=rating&limit=20',
+          url: '/yelp/v3/businesses/search?term=' + term + '&location=' + location + '&radius=3218&categories=restaurants&price=1&open_now=true&sort_by=rating&limit=20',
           type: 'GET',
           success: function(data) {
             data.businesses.forEach(function(business){
@@ -44,6 +44,7 @@
                   var results = document.getElementById('results');
                   results.style.top = '600px';
                   document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
                 });
               });
               initMap();
@@ -70,5 +71,6 @@
   module.restaurantObj = restaurantObj;
   $(window).on('unload', function(){
     document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   });
 })(window);

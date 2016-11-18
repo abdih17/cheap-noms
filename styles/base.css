@@ -2,7 +2,7 @@
   width: 50%;
   height: 500px;
   margin-left: -27%;
-  margin-top: 8em;
+  margin-top: 11em;
   border: 20px solid rgba(127, 63, 63, .5);
   position: absolute;
   left: 50%
@@ -77,7 +77,7 @@ p {
   position: relative;
   top: -760px;
   z-index: 1;
-  width: 100%;
+  width: auto;
   height: 770px;
 }
 
@@ -204,4 +204,53 @@ p {
 
 .submissionForm button:hover:before{
   border-right-color: #e54040;
+}
+
+@media screen and (max-width: 500px) {
+  .submissionForm {
+    width: auto;
+    height: 100%;
+    padding: 0;
+    margin: auto;
+    background: #000;
+    background: rgba(0,0,0,.0);
+    border-radius: 15px;
+    box-shadow: 0 10px 10px rgba(0,0,0,.4) inset, 0 10px 0 rgba(0,0,0,.4);
+  }
+  .submissionForm input {
+      width: 350px;
+      height: 50px;
+      margin-left: 0px;
+      padding: 0px;
+      float: none;
+      margin-top: 3em;
+      border: 0;
+      background: #eee;
+      border-radius: 3px 3px 3px 3px;
+  }
+  #outerContainer {
+      margin: auto;
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+  }
+
+  #locationInput + #termInput {
+      margin-top: 1em;
+      margin-left: 0;
+  }
+  #termInput + #listButton {
+     margin-left: 0px;
+  }
+  .submissionForm button {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #listButton + #mapButton {
+    margin-left: 0px;
+    margin-top: 1em;
+  }
 }
