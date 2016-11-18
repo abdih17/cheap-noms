@@ -64,16 +64,30 @@
   font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
   color: #fff;
   text-transform: uppercase;
-  background: #FFBC36;
+  background: #fa3c3c;
   text-shadow: 0 -1px 0 rgba(255, 255, 255, .9);
   z-index: 1;
 }
+
+#apocalypseButton button:hover{
+  background: #ff5959;
+}
+
+#apocalypseButton button:active,
+#apocalypseButton button:focus{
+  background: #c42f2f;
+}
+
+#apocalypseButton button:hover:before{
+  border-right-color: #e54040;
+}
+
 #apocalypseButtonAbout {
   position: relative;;
   float: right;
   top: 4em;
   overflow: visible;
-  left: 3px;
+  left: 17px;
   margin-right: 20px;
   border: 0;
   padding: 0;
@@ -83,9 +97,22 @@
   font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
   color: #fff;
   text-transform: uppercase;
-  background: #FFBC36;
+  background: #fa3c3c;
   text-shadow: 0 -1px 0 rgba(255, 255, 255, .9);
   z-index: 1;
+}
+
+#apocalypseButtonAbout button:hover{
+  background: #ff5959 !important;
+}
+
+#apocalypseButtonAbout button:active,
+#apocalypseButtonAbout button:focus{
+  background: #c42f2f !important;
+}
+
+#apocalypseButtonAbout button:hover:before{
+  border-right-color: #e54040 !important;
 }
 
 #apocalypseButtonHome {
@@ -103,9 +130,22 @@
   font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
   color: #fff;
   text-transform: uppercase;
-  background: #FFBC36;
+  background: #fa3c3c;
   text-shadow: 0 -1px 0 rgba(255, 255, 255, .9);
   z-index: 1;
+}
+
+.apocalypseButton button:hover{
+  background: #ff5959;
+}
+
+.apocalypseButton button:active,
+#apocalypseButton button:focus{
+  background: #c42f2f;
+}
+
+.apocalypseButton button:hover:before{
+  border-right-color: #e54040;
 }
 
 /*#homeButton {
