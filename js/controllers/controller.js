@@ -20,14 +20,16 @@ resultsController.revealMap = function(){
 };
 
 $('#listButton').on('click', function(e) {
-  clickFunction();
+  var cont = clickFunction();
   resultsController.revealList();
   console.log(resultsController);
 });
 
 $('#mapButton').on('click', function(e) {
-  clickFunction();
-  resultsController.revealMap();
+  var cont = clickFunction();
+  if(cont){
+    resultsController.revealMap();
+  }
 });
 
 $('#apocalypseButton').on('click', function(e){
@@ -39,8 +41,10 @@ $('form.submissionForm').on('keydown', function(e){
   e.target === $('form.submissionForm').children()[1]){
     if(e.keyCode === 13){
       e.preventDefault();
-      clickFunction();
-      resultsController.revealList();
+      var cont = clickFunction();
+      if(cont){
+        resultsController.revealList();
+      }
     }
   }
 });
@@ -48,7 +52,11 @@ $('form.submissionForm').on('keydown', function(e){
 var clickFunction = function () {
   var location = $('#locationInput').val();
   var term = $('#termInput').val();
-  restaurantObj.requestRepos(location, term);
-  var body = document.getElementById('body');
-  body.style.overflow = 'visible';
+  var cont = restaurantObj.requestRepos(location, term);
+  if(cont){
+    var body = document.getElementById('body');
+    body.style.overflow = 'visible';
+    return true;
+  }
+  else return false;
 };
