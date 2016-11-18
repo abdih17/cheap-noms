@@ -62,7 +62,7 @@ function initMap(locationIndex){
         data: {
           labels: ['Rating', 'Popularity', 'Distance'],
           datasets: [{
-            data: [2.5 * (result.rating - 3), 5 * Math.log(result.reviewCount) / Math.log(maxReviewCount), 5 - result.distance * 4 / 3218],
+            data: [5 - Math.log(6 - result.rating) / Math.log(5), 5 * Math.log(result.reviewCount) / Math.log(maxReviewCount), 5 - result.distance * 4 / 3218],
             backgroundColor: [
               'rgba(255, 0, 0, 0.2)',
               'rgba(0, 0, 255, 0.2)',
