@@ -2,7 +2,7 @@
 /*Changed width and height for #resultsContainer.*/
 #resultsContainer {
   width: 250px;
-  height: 300px;
+  /*height: 300px;*/
   margin: 15px;
   float: left;
   overflow: 0 auto;
@@ -15,7 +15,7 @@
 }
 
 /*DANNY*/
-#results {
+/*#results {
   box-shadow: 0px 0px 5px 3px #888888;
   position: absolute;
   top: 0%;
@@ -26,6 +26,21 @@
   background-color: #f1f1f1;
   opacity: 90%;
   top: 0%;
+}*/
+
+/*PETER*/
+#results {
+  box-shadow: 0px 0px 5px 3px #888888;
+  position: absolute;
+  width: 90%;
+  height: auto;
+  padding: inherit;
+  margin-top: 3em;
+  margin-left: 4em;
+  background-color: #f1f1f1;
+  opacity: 90%;
+  top: 0%;
+  display: inline-block;
 }
 
 .main-container{
@@ -152,5 +167,10 @@ ul.topnav li.icon {display: none;}
 
 #body{
   overflow: hidden;
+  background-image: url("/images/restaurant.jpeg");
+}
 
+#resultsSection {
+  display: inline-block;
+  box-shadow: 11px 11px 32px -8px rgba(0,0,0,0.66);
 }
