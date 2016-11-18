@@ -2,7 +2,7 @@
   width: 50%;
   height: 500px;
   margin-left: -27%;
-  margin-top: 11em;
+  margin-top: 13em;
   border: 20px solid rgba(127, 63, 63, .5);
   position: absolute;
   left: 50%
@@ -23,11 +23,14 @@ body {
 
 /*HERO TEXT*/
 .hello {
-  color:white;
+  color: white;
   font-family: 'Bubblegum Sans', sans-serif;
-  font-size: 90px;
+  font-size: 120px;
   padding: 0;
   text-align: center;
+  position: relative;
+  top: 15px;
+  left: 3%;
 }
 .intro-container{
   position: relative;
@@ -79,13 +82,12 @@ p {
 }
 
 #color-overlay {
-  margin: 0;
+  margin-right: 20%;
   position: relative;
-  top: -160px;
-  left: 130px;
+  top: -150px;
+  left: 190px;
   z-index: 3;
-  align-text: center;
-  width: 80%;
+  width: 75%;
   height: 500px;
   background-color: black;
   opacity: 0.5;
@@ -108,12 +110,13 @@ p {
 }
 
 .submissionForm {
-  width: 850px;
+  width: 68%;
   height: 60px;
   padding: 15px;
   margin: 150px auto 50px auto;
-  background: #000;
-  background: rgba(0,0,0,.0);
+  margin-left: 8%;
+  padding: 1% 4%;
+  margin-top: 15%;
   border-radius: 15px;
   box-shadow: 0 10px 10px rgba(0,0,0,.4) inset, 0 10px 0 rgba(0,0,0,.4);
 }
@@ -123,7 +126,7 @@ p {
 }
 
 #locationInput + #termInput{
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 #termInput + #listButton{
@@ -135,14 +138,11 @@ p {
 }
 
 .submissionForm input {
-  width: 350px;
-  height: 30px;
-  margin-left: 60px;
-  padding: 10px 5px;
-  float: left;
+  width: 44%;
+  padding: 10px 4px 10px 4px;
   font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
   border: 0;
-  background: #eee;
+  background: #f7f3f3;
   border-radius: 3px 3px 3px 3px;
 }
 
@@ -158,9 +158,13 @@ p {
   margin-top: -35px;
   z-index: 3;
   top: -80px;
-  left: 200px;
+  left: 18%;
 }
 
+#locationInput, #termInput{
+  position: relative;
+  top: 10px;
+}
 
 .submissionForm button {
   overflow: visible;
@@ -176,7 +180,7 @@ p {
   font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
   color: #fff;
   text-transform: uppercase;
-  background: #FFBC36;
+  background: #fa3c3c;
   text-shadow: 0 -1px 0 rgba(255, 255, 255, .9);
   z-index: 1;
 }
@@ -190,7 +194,7 @@ p {
 }
 
 .submissionForm button:hover{
-  background: #e54040;
+  background: #ff5959;
 }
 
 .submissionForm button:active,
