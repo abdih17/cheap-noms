@@ -9,10 +9,13 @@
     else{
       $.when(
         $.ajax({
-          url: '/yelp/v3/businesses/search?term=' + term + '&location=' + location + '&radius=3218&categories=restaurants&price=1&open_now=true&sort_by=rating&limit=20',
+          url: '/api.yelp.com/v3/businesses/search?term=' + term + '&location=' + location + '&radius=3218&categories=restaurants&price=1&open_now=true&sort_by=rating&limit=20',
+
           type: 'GET',
           success: function(data) {
+
             data.businesses.forEach(function(business){
+              console.log('made it');
               if (3218 < business.distance) {
                 data.businesses.splice(data.businesses.indexOf(business), 1);
               }
