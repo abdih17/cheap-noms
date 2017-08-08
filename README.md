@@ -1,5 +1,5 @@
 # Cheap Noms
-An app that uses the Yelp and Google Maps api to generate food options and locations in a easy-to-find-way.
+An app that uses the Yelp and Google Maps API to generate food options and locations in a easy-to-find-way.
 
 ### User Story
 
